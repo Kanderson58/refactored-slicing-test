@@ -33,6 +33,10 @@ main {
   font-weight: 500;
 }
 
+.mobile-easier-to-use {
+  display: none;
+}
+
 .easier-to-use {
   width: 33px;
   height: 59%;
@@ -144,8 +148,9 @@ h1 {
     height: 250px;
   }
 
-  .easier-to-use-container {
+  .etu-svg {
     width: 40px;
+    height: 250px;
   }
 
   .easier-to-use {
@@ -195,6 +200,10 @@ h1 {
   main {
     height: 200px;
     margin-left: 12px;
+  }
+
+  .etu-svg {
+    height: 200px;
   }
 
   .logo {
@@ -250,5 +259,145 @@ h1 {
     width: 45px;
     height: 45px;
     transform: translate(300px, -100px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  *:not(title, html) {
+    all: unset;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .easier-to-use, .etu-svg {
+    display: none;
+  }
+
+  .number-one {
+    margin: 5px 0 -38px -32px;
+  }
+  
+  .hexagon {
+    width: 46px;
+    height: 52px;
+    margin: 10px;
+    z-index: 2;
+  }
+
+  .hexagon-wrapper {
+    display: inline-block;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color:white;
+  }
+
+  .easier-to-use-container {
+    width: 375px;
+  }
+
+  .mobile-easier-to-use {
+    display: flex;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #CCC 0%, rgba(133, 133, 133, 0.28) 100%);
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto Mono;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 28px; /* 186.667% */
+    letter-spacing: 1.782px;
+    height: 48px;
+    width: 375px;
+  }
+
+  .mobile-etu-text {
+    width: 222.5px;
+    height: 33px;
+    flex-shrink: 0;
+    margin-top: 11px;
+  }
+
+  .logo-container {
+    width: 375px;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .logo {
+    width: 147px;
+    height: 184px;
+    flex-shrink: 0;
+    margin-top: 40px;
+  }
+
+  .info {
+    width: 375px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: #383838;
+    font-family: Roboto;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 28px; /* 133.333% */
+    margin: 57px 41px 12px 45px;
+  }
+
+  .info-paragraph {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    margin: 0 43px 105px 47px;
+  }
+
+  .dark-grey-arrow {
+    width: 67.142px;
+    height: 67.142px;
+    flex-shrink: 0;
+    bottom: -20px;
+    transform: translateX(0px);
+  }
+
+  .light-grey-arrow {
+    width: 67.142px;
+    height: 67.142px;
+    flex-shrink: 0;
+    bottom: 22px;
+    transform: translateX(160px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner {
+    width: 70%;
+    height: 100%;
+    border-left: white 150px solid;
+    border-right: white 150px solid;
   }
 }
