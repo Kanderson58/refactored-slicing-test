@@ -41,7 +41,7 @@ main {
   width: 33px;
   height: 59%;
   margin: 68px 4px 54px 11px;
-  writing-mode: tb-rl;
+  writing-mode: vertical-lr;
   transform: rotate(-180deg) translateY(300px);
   flex-shrink: 0;
   color: #fff;
